@@ -1,5 +1,5 @@
 @mixin mobile{
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: px) {
     @content;
   }
 }
@@ -32,6 +32,10 @@
       flex-direction: column;
       gap: 10px;
       align-items: center;
+
+      @include mobile {
+        padding: 10px;
+      }
   
       .logo {
         color: #5d5b8d;
@@ -58,7 +62,9 @@
           border-bottom: 1px solid #a7bcff;
           &::placeholder {
             color: rgb(175, 175, 175);
+
           }
+          
         }
   
         button {
@@ -107,6 +113,9 @@
       overflow: hidden;
       @include tablet{
         width: 90%;
+      }
+      @include mobile {
+        width: 100%;
       }
       
   
